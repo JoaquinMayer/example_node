@@ -10,6 +10,7 @@ const upload = multer({
 
 router.get("/", function (req, res) {
 
+    console.log(req.headers["Authorization"])
     const filterMessages = req.query.chat || null
 
     controller.getMessages(filterMessages)
